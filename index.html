@@ -4,40 +4,70 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://use.fontawesome.com/3903c9d7fd.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <title>Jazzing with Three.js</title>
 </head>
 <body>
   <header>
+    <h1>Three.Js JAZZ</h1>
 		<nav>
-			<ul>
-				<li><a href="https://threejs.org/" target="_blank" title="Three.js">What is Three.js? </a></li>
-			</ul>
+
 		</nav>
 	</header>
 
-  <h1>Three.Js JAZZ</h1>
+
 
 <section class="sound">
-  <audio controls autoplay>
-    <source src="media/On-My-Way-Lofi-Study-Music.ogg" type="audio/ogg">
-    <source src="media/On-My-Way-Lofi-Study-Music.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-  </audio>
   <p> <a href ="https://soundcloud.com/ghostrifter-official" target="_blank" title="On My Way by Ghostrifter Official"> On My Way by Ghostrifter Official </a> <br />
   &#9835; &#9836;&#9836; <br /> Music promoted by <br /> <a href="https://www.chosic.com/free-music/all/" target="_blank" > https://www.chosic.com/free-music/all/ </a> <br />
   <a href = "https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"  title="Creative Commons CC BY-SA 3.0">Creative Commons CC BY-SA 3.0 </a>
-
   </p>
+  <audio id="yourAudio" preload='none'>
+    <source src="media/On-My-Way-Lofi-Study-Music.ogg" type="audio/ogg">
+    <source src="media/On-My-Way-Lofi-Study-Music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <p><a href="#" id="audioControl">Play!</a></p>
+
+  <ul class="menu">
+  <li class="menu_list">
+      <span class="front">&#9711;</span>
+      <a href="#" class="side">home</a>
+  </li>
+  <li class="menu_list">
+      <span class="front">&#9711;</span>
+      <a href="#" class="side">about</a>
+  </li>
+  <li class="menu_list">
+      <span class="front">&#9711;</span>
+      <a href="#" class="side">projects</a>
+  </li>
+  <li class="menu_list">
+      <span class="front">&#9711;</span>
+      <a href="#" class="side">contact</a>
+  </li>
+  </ul>
 </section>
-
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.5/dat.gui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="js/jazz-three.js"></script>
+  <script>
+    var yourAudio = document.getElementById('yourAudio');
+    var ctrl = document.getElementById('audioControl');
 
+    ctrl.onclick = function () {
+      // Update the Button
+      var pause = ctrl.innerHTML === 'Pause!';
+      ctrl.innerHTML = pause ? 'Play!' : 'Pause!';
+      // Update the Audio
+      var method = pause ? 'pause' : 'play';
+      yourAudio[method]();
+      // Prevent Default Action
+      return false;
+    };
+  </script>
   <section></section>
   <footer>
 		<p>2021 <span> &#9675;</span> Nara Yaralyan</p>
