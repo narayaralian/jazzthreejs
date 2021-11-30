@@ -138,7 +138,7 @@ function onMousemove(event) {
   }
 }
 window.addEventListener('mousemove', onMousemove);
-
+var lightness = 0;
 
 function animate() {
 	let i = 0.00001;
@@ -150,6 +150,16 @@ function animate() {
 			i+=0.00001;
 		}
 	});
+
+	for (let k = 0; k < stars.length; k++) {
+    let star = stars[k];
+    star.rotation.x += 0.01;
+    star.rotation.y += 0.01;
+		// twinkle
+		lightness > 150 ? lightness = 0 : lightness++;
+		star.material.color = new THREE.Color("hsl(58, 100%, " + lightness + "%)");
+}
+
 	controls.update();
 	requestAnimationFrame(animate);
 	renderer.render( scene, camera );
