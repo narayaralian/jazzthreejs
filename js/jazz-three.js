@@ -1,23 +1,26 @@
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.117.1/build/three.module.js';
+
 const textureLoader = new THREE.TextureLoader()
 const normalTexture = textureLoader.load('texture/NormalMap.png')
 
 // Debug
 const gui = new dat.GUI()
 
-// first set the three basic elements of three.js - scene, camera, and renderer
+// First set the three basic elements of three.js - scene, camera, and renderer
 var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000)
-//camera position - x,y,z;
+//Camera position - x,y,z;
 camera.position.set(0,1,9);
 
 var renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.autoClear = true;
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor("#000000");
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+//Append the renderer to the DOM
+//document.body.appendChild(renderer.domElement);
+document.getElementById("threejs").appendChild(renderer.domElement);
 
 //make the scene responsive
 window.addEventListener('resize', ()=> {

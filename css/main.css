@@ -11,7 +11,7 @@ canvas {
 }
 
 h1 {
-
+  color: beige;
   font-size: 7em;
   text-transform: uppercase;
   width: auto;
@@ -26,9 +26,13 @@ h1:hover {
   transition: all 0.7s;
 }
 
+section#threejs {
+  position: relative;
+}
+
 .sound {
   position: absolute;
-  top: 25%;
+  top: 10px;
   left: 10px;
   text-align: center;
 }
