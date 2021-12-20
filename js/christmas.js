@@ -115,6 +115,8 @@ scene.add(meshNew);
 
 //add parallex effect to the Sphere
 const updateSphere = (event) => {
+  event.preventDefault();
+
   mesh.position.y = window.scrollY * .004;
 	meshNew.position.y = window.scrollY * .004;
 }
@@ -138,8 +140,8 @@ function onMousemove(event) {
   }
 }
 window.addEventListener('mousemove', onMousemove);
-var lightness = 0;
 
+var lightness = 0;
 function animate() {
 	let i = 0.00001;
 	scene.traverse( function(child) {
@@ -163,7 +165,6 @@ function animate() {
 	controls.update();
 	requestAnimationFrame(animate);
 	renderer.render( scene, camera );
-
 }
 animate();
 

@@ -20,7 +20,7 @@
       &#9835; &#9836;&#9836; <br /> Music promoted by <br /> <a href="https://www.chosic.com/free-music/all/" target="_blank" > https://www.chosic.com/free-music/all/ </a> <br />
       <a href = "https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"  title="Creative Commons CC BY-SA 3.0">Creative Commons CC BY-SA 3.0 </a>
       </p>
-      <audio id="yourAudio" loop preload="auto">
+      <audio id="yourAudio" loop autoplay preload="auto">
         <source src="media/Music-Box-Carol-Of-The-Bells.ogg" type="audio/ogg">
         <source src="media/Music-Box-Carol-Of-The-Bells.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -54,7 +54,16 @@
   <div style="clear: both;"></div>
   </section>
 
-  <section>Test</section>
+  <section>
+    <h2>Photo Credits</h2>
+    <p>"Thoughtful woman in Christmas hat reading", Photo by <a href="https://www.pexels.com/@julia-larson?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Julia Larson</a> from <a href="https://www.pexels.com/photo/thoughtful-woman-in-christmas-hat-reading-book-in-cafe-6113398/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Pexels</a></p>
+    <p>"Grand Ferrero Rocher Bauble", Photo by <a href="https://www.pexels.com/@dzeninalukac?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Dzenina Lukac</a> from <a href="https://www.pexels.com/photo/grand-ferrero-rocher-bauble-754191/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Pexels</a></p>
+    <p>"Brown and White House Shape Cookies", Photo by <a href="https://www.pexels.com/@ekaterina-bolovtsova?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">EKATERINA BOLOVTSOVA</a> from <a href="https://www.pexels.com/photo/brown-and-white-house-shape-cookies-and-a-cake-5702943/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Pexels</a></p>
+    <p>"Christmas Cookies On The Table", Photo by <a href="https://www.pexels.com/@pavel-danilyuk?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Pavel Danilyuk</a> from <a href="https://www.pexels.com/photo/christmas-cookies-on-the-table-5623616/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Pexels</a></p>
+    <p>"Coffee, Food and Dominoes in Suspended in Midair", Photo by <a href="https://www.pexels.com/@jj-jordan-44924743?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">JJ Jordan</a> from <a href="https://www.pexels.com/photo/coffee-food-and-dominoes-in-suspended-in-midair-7981894/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Pexels</a></p>
+    <p>"Gift Boxes Under a Christmas Tree", Photo by <a href="https://www.pexels.com/@thirdman?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Thirdman</a> from <a href="https://www.pexels.com/photo/gift-boxes-under-a-christmas-tree-6533912/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Pexels</a></p>
+
+  </section>
 
   <footer>
 		<p>2021 <span> &#9675;</span> Nara Yaralyan</p>
@@ -73,9 +82,9 @@
     <script src="js/MTLLoader.js"></script>
     <script>
     // Set the player
+
       var yourAudio = document.getElementById('yourAudio');
       var ctrl = document.getElementById('audioControl');
-
       ctrl.onclick = function () {
         // Update the Button
         var pause = ctrl.innerHTML === 'Pause!';
@@ -85,7 +94,7 @@
         yourAudio[method]();
         // Prevent Default Action
         return false;
-      };
+      }
       </script>
   </section>
 

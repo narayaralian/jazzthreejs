@@ -25,7 +25,9 @@ h1:hover {
   text-shadow: 7px 5px 6px #000000;
   transition: all 0.7s;
 }
-
+p, h2, h3 {
+  padding: 0 10px 0 10px;
+}
 section#threejs {
   position: relative;
 }
