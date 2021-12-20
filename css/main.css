@@ -63,10 +63,9 @@ footer {
     box-sizing: border-box;
 }
 ul.menu {
-
     display: inline-block;
     list-style-type: none;
-    position: fixed;
+    position: absolute;
     z-index: 999;
     right: 0;
     background-color: #0000004d;
