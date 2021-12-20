@@ -66,6 +66,12 @@ ul.menu {
 
     display: inline-block;
     list-style-type: none;
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    background-color: #0000004d;
+    box-shadow: 7px 5px 6px black;
+    height: 100%;
 }
 li.menu_list {
     height: 100px;
