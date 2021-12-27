@@ -2,15 +2,18 @@
 
 body {
   margin: 0;
+  padding: 0;
   height: 100vh;
   font-family: 'Scheherazade New', serif;
+  background-color: #7e802e;
 }
 
 canvas {
   display: block;
 }
 #space-holder {
-  min-height: 100%;
+  min-height: 300px;
+  clear: both;
 }
 
 h1 {
@@ -62,22 +65,23 @@ footer {
 * {
     margin: 0;
     padding: 0;
-    box-sizing:content-box;
+    box-sizing:border-box;
 }
 nav{
-  text-align: center;
+  text-align: right;
+  box-shadow: black 20px 10px 25px;
+  border-top: #896429 5px solid;
+  width: 95%;
 }
 ul.menu {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
     list-style-type: none;
     position: relative;
     z-index: 999;
-    right: 0;
-    height: 100%;
+    background-color: #dad9db;
 }
 li.menu_list {
     height: 450px;
@@ -100,7 +104,7 @@ a.side {
     transition: all .7s ease-out;
     cursor: pointer;
 }
-nav p a {
+button.home a {
   text-decoration: none;
     font-size: 1.1em;
     text-transform: uppercase;
@@ -111,10 +115,10 @@ nav p a {
     right: 0;
     z-index: 999;
 }
-nav p a.gold {
+button.home a.gold {
   background-color: #896429;
 }
-nav p a.red {
+button.home a.red {
   background-color: #950000;
 }
 
@@ -138,17 +142,15 @@ li.menu_list .front {
     color: #ff0000;
     transform-origin: 0 0;
 }
+li.menu_list .front a {
+  color: #ff0000;
+  text-decoration: none;
+}
 a.side {
     background-color: #950000;
     color: #a09999;
     transform-origin: 0 0 85px;
     transform: rotateY(-90deg);
-}
-li.menu_list:hover a.side {
-    transform: rotateY(0deg);
-}
-li.menu_list:hover .front {
-    transform: rotateY(90deg);
 }
 
 span.front img {
@@ -177,6 +179,12 @@ span.front img {
 @media only screen and (min-width: 992px) {
   h1 {
     font-size: 6em;
+  }
+  li.menu_list:hover a.side {
+      transform: rotateY(0deg);
+  }
+  li.menu_list:hover .front {
+      transform: rotateY(90deg);
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
