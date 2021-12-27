@@ -9,16 +9,18 @@ body {
 canvas {
   display: block;
 }
+#space-holder {
+  min-height: 100%;
+}
 
 h1 {
-  color: beige;
   font-size: 7em;
+  color: #dad9db;
   text-transform: uppercase;
   width: auto;
   line-height: .8em;
-  padding: .2em;
+  padding: .3em;
   text-shadow: 4px 3px 5px #000000;
-  background-color: #ffffffad;
   transition: all 0.7s;
 }
 h1:hover {
@@ -60,21 +62,26 @@ footer {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:content-box;
+}
+nav{
+  text-align: center;
 }
 ul.menu {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
-    position: absolute;
+    position: relative;
     z-index: 999;
     right: 0;
-    background-color: #0000004d;
-    box-shadow: 7px 5px 6px black;
     height: 100%;
 }
 li.menu_list {
-    height: 100px;
-    width: 100px;
+    height: 450px;
+    width: 450px;
     position: relative;
 }
 li.menu_list .front,
@@ -82,7 +89,7 @@ a.side {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 100%;
     width: 100%;
     padding: 30px;
     position: absolute;
@@ -92,6 +99,40 @@ a.side {
     text-transform: uppercase;
     transition: all .7s ease-out;
     cursor: pointer;
+}
+nav p a {
+  text-decoration: none;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    color: white;
+    margin: 25px;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+}
+nav p a.gold {
+  background-color: #896429;
+}
+nav p a.red {
+  background-color: #950000;
+}
+
+#nav-jazz, #nav-christmas {
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-clip: border-box;
+}
+#nav-jazz {
+  background-image: url("../assets/jazz.jpg");
+}
+#nav-christmas {
+  background-image: url("../assets/christmas.jpg");
+}
+#nav-red {
+  background-color: #950000;
 }
 li.menu_list .front {
     color: #ff0000;
@@ -109,6 +150,7 @@ li.menu_list:hover a.side {
 li.menu_list:hover .front {
     transform: rotateY(90deg);
 }
+
 span.front img {
   width: 35px;
   height: 35px;

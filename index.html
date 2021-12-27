@@ -8,79 +8,35 @@
   <link rel="stylesheet" href="css/main.css">
   <title>Jazzing with Three.js</title>
 </head>
-<body>
+<body style="background-color: #ededed;">
   <header>
-    <h1>Three.Js JAZZ</h1>
+    <h1>Three.Js</h1>
 		<nav>
       <ul class="menu">
       <li class="menu_list">
-          <span class="front">jazz</span>
-          <a href="index.html" class="side">jazz</a>
+          <span class="front"  id="nav-jazz">jazz</span>
+          <a href="jazz.html" class="side">jazz</a>
       </li>
       <li class="menu_list">
-          <span class="front">christmas</span>
+          <span class="front" id="nav-red">Three.js</span>
+          <a href="https://threejs.org/" target="_blank" class="side">Three.js</a>
+      </li>
+      <li class="menu_list">
+          <span class="front" id="nav-christmas">christmas</span>
           <a href="christmas.html" class="side">christmas</a>
-      </li>
-      <li class="menu_list">
-          <span class="front">&#9711;</span>
-          <a href="#" class="side">projects</a>
-      </li>
-      <li class="menu_list">
-          <span class="front">&#9711;</span>
-          <a href="#" class="side">contact</a>
-      </li>
-      <li class="menu_list">
-          <span class="front">&#9711;</span>
-          <a href="#" class="side">contact</a>
       </li>
       </ul>
     </nav>
 	</header>
 
-  <section id="threejs">
-    <section class="sound">
-      <p> <a href ="https://soundcloud.com/ghostrifter-official" target="_blank" title="On My Way by Ghostrifter Official"> On My Way by Ghostrifter Official </a> <br />
-      &#9835; &#9836;&#9836; <br /> Music promoted by <br /> <a href="https://www.chosic.com/free-music/all/" target="_blank" > https://www.chosic.com/free-music/all/ </a> <br />
-      <a href = "https://creativecommons.org/licenses/by-sa/3.0/" target="_blank"  title="Creative Commons CC BY-SA 3.0">Creative Commons CC BY-SA 3.0 </a>
-      </p>
-      <audio id="yourAudio" preload='none'>
-        <source src="media/On-My-Way-Lofi-Study-Music.ogg" type="audio/ogg">
-        <source src="media/On-My-Way-Lofi-Study-Music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-      <p><a href="#" id="audioControl">Play!</a></p>
-    </section>
-
-  <div style="clear: both;"></div>
-  </section>
-
-  <section>Test</section>
+  <section id="space-holder"></section>
 
   <footer>
 		<p>2021 <span> &#9675;</span> Nara Yaralyan</p>
 	</footer>
 
   <section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.5/dat.gui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script  type="module" src="js/jazz-three.js"></script>
-    <script>
-    // Set the player
-      var yourAudio = document.getElementById('yourAudio');
-      var ctrl = document.getElementById('audioControl');
 
-      ctrl.onclick = function () {
-        // Update the Button
-        var pause = ctrl.innerHTML === 'Pause!';
-        ctrl.innerHTML = pause ? 'Play!' : 'Pause!';
-        // Update the Audio
-        var method = pause ? 'pause' : 'play';
-        yourAudio[method]();
-        // Prevent Default Action
-        return false;
-      };
-      </script>
   </section>
 
 </body>
