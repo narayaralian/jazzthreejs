@@ -1,7 +1,7 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.module.js';
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/controls/OrbitControls.js';
-import { OBJLoader } from 'https://threejs.org/examples/jsm/loaders/OBJLoader.js'
-import { MTLLoader } from 'https://threejs.org/examples/jsm/loaders/MTLLoader.js'
+//import { OBJLoader } from 'https://threejs.org/examples/jsm/loaders/OBJLoader.js'
+//import { MTLLoader } from 'https://threejs.org/examples/jsm/loaders/MTLLoader.js'
 
 const scene = new THREE.Scene();
 // set the scene's background image

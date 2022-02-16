@@ -115,6 +115,7 @@ button.home a {
     right: 0;
     z-index: 999;
 }
+
 button.home a.gold {
   background-color: #896429;
 }
